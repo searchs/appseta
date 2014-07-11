@@ -1,9 +1,9 @@
 ElasticSearch StartUp
 
-1.  Install ElasticSearch
-2.  Install plugins -kopf or head, javascript and python (optional)
-3.  Create an index by running the command:
---the name of the index, crux, can be anything you want
+#1.  Install ElasticSearch (brew install elasticsearch)
+#2.  Install plugins -kopf or head, javascript and python (optional) (search Github for these plugins)
+#3.  Check ElasticSearch is running  at localhost:9200.  On commandline, create an index by running the command:
+#--the name of the index, crux, can be anything you want
 curl -XPUT http://localhost:9200/crux -d '{
     "settings" : {
         "index" : {
@@ -13,11 +13,11 @@ curl -XPUT http://localhost:9200/crux -d '{
     }
 }'
 
-4.  Verify the index is created.
-5.  Run the create index command again.  An error should be returned:
-  E.g.: {"error":"IndexAlreadyExistsException[[crux] already exists]","status":400}
+#4.  Verify the index is created. Check http://localhost:9200
+#5.  Run the create index command again.  An error should be returned:
+ # E.g.: {"error":"IndexAlreadyExistsException[[crux] already exists]","status":400}
 
-6.  Create an index with mappings:
+#6.  Create an index with mappings:
 
 curl -XPOST localhost:9200/yaba -d '{ "settings" : { "number_of_shards" : 2,
         "number_of_replicas" : 1    },    "mappings" : { "order" : { "properties" : {
@@ -32,18 +32,18 @@ curl -XPOST localhost:9200/yaba -d '{ "settings" : { "number_of_shards" : 2,
       }    
   }    
 }'
-7.  Delete an index: *** CAUTION: cannot be reversed if index backup does not exists ***
+#7.  Delete an index: *** CAUTION: cannot be reversed if index backup does not exists ***
   curl -XDELETE http://localhost:9200/{existing_index_name}
-  -should get an acknowledged true response.   Http 404 is returned for non-existing index
-8.  Closing an index:
+  #-should get an acknowledged true response.   Http 404 is returned for non-existing index
+#8.  Closing an index:
   curl -XPOST http://localhost:9200/{existing_index_name}/_close
-    -should get an acknowledged true response
-9.  Open a closed index:
+   # -should get an acknowledged true response
+#9.  Open a closed index:
   curl -XPOST http://localhost:9200/{existing_index_name}/_open
     - should get an acknowledged true response
-10.  Rivers  - are ElasticSearch services that pulls/get data into ElasticSearch.  Compartible data sources include
-  CouchDB, MongoDB, RabbitMQ, SQL DBMS (Oracle, MySQL, PostgreSQL etc), Redis, Twitter, Wikipedia
-11.  To create a river, run a command like this :
+#10.  Rivers  - are ElasticSearch services that pulls/get data into ElasticSearch.  Compartible data sources include
+ # CouchDB, MongoDB, RabbitMQ, SQL DBMS (Oracle, MySQL, PostgreSQL etc), Redis, Twitter, Wikipedia
+#11.  To create a river, run a command like this :
    curl -XPUT 'http://localhost:9200/_river/benue/_meta' -d  '{"type": "dummy"}'
-    --should get an OK:true response
-12.  
+  #  --should get an OK:true response
+#12.  
