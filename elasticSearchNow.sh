@@ -1,4 +1,4 @@
-ElasticSearch StartUp
+#ElasticSearch StartUp
 
 #1.  Install ElasticSearch (brew install elasticsearch)
 #2.  Install plugins -kopf or head, javascript and python (optional) (search Github for these plugins)
