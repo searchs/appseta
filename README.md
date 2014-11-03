@@ -12,7 +12,7 @@ Build APIs: Grape gem
 
 STORM INSTALL - My Storm Install on Ubuntu 14.10
 =================
-''' bash
+``` bash
 sudo apt-get --yes install zookeeper=3.4.5* zookeeperd=3.4.5*
 sudo service elasticsearch restart
 sudo groupadd storm
@@ -32,5 +32,4 @@ sudo mkdir /etc/storm
 sudo chown storm:storm /etc/storm
 sudo mv /usr/share/storm/conf/storm.yaml  /etc/storm/
 sudo ln -s /etc/storm/storm.yaml /usr/share/storm/conf/storm.yaml
-
-'''
+```
