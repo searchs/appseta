@@ -14,7 +14,6 @@ subl .bashrc
 source .bashrc
 #check storm home is set
 echo $STORM_HOME
-sudo sed -i 's/${storm.home}\/logs/\/var\/log\/storm/g' /usr/share/storm/log4j/storm.log.properties
 sudo mkdir /etc/storm
 sudo chown storm:storm /etc/storm
 sudo mv /usr/share/storm/conf/storm.yaml  /etc/storm/
