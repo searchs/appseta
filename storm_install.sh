@@ -19,3 +19,5 @@ sudo mkdir /etc/storm
 sudo chown storm:storm /etc/storm
 sudo mv /usr/share/storm/conf/storm.yaml  /etc/storm/
 sudo ln -s /etc/storm/storm.yaml /usr/share/storm/conf/storm.yaml
+#Install Suipervisor
+sudo apt-get --yes install supervisor
