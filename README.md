@@ -14,6 +14,10 @@ Ruby ToolBox: https://www.ruby-toolbox.com/
 *  Ultimate Online Web Resource: bento.io
 *  
 Test Frameworks: http://www.gebish.org/
+* Yadda
+* Cucumber JS
+* Mocha
+* Webdriver.io/WebdriverJS
 
 Web Workflow Tools:
 ==========================
