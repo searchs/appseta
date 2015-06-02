@@ -1,0 +1,72 @@
+ACCESSIBILITY TESTING
+
+VoiceOver - Macbook and iOS
+
+Keyboard Shortcuts
+Elements list: insert + F7
+
+Non-Text Content
+Images:  alt=""
+
+Links - Enter
+Button - Enter, Space
+
+
+Confirm the content order is as expected :  Only 1 H1 on page
+
+Check Browser zooming (+200/-50% zoom)
+Check Captions and transcripts for media
+-- audio description?
+Preventing seizures
+
+Check tooltips if present in feature (can automate) - check UI Toolkit release notes every 2 weeks
+
+Automated Testing
+
+Automated validation: 
+	required HTML element content
+	required HTML attribute values
+	relationships between certain HTML elements
+	color contrasts - WCAG 2.0 standards
+
+
+1. Required HTML element content
+  Missing attributes
+
+ 2.  Color Contracts - Minimum Level AA
+ 	* At least 4.5:1 against its background
+ 	* At least 3:1 if the text is 18pt pr 14pt and bold
+ 	* Icons as well 
+
+3.  Check page titles (if your feature updates page title)
+	* Not url as title, Real title:  Activities & Attraction
+
+4.  Page language
+	Check html opening tag has lang attribute e.g. <html lang="en">
+
+
+Application should be based on:
+	1.  Efficiency
+	2.  Effectiveness
+	3.  Sustainability
+
+
+Icons(images) do not have to necessarily have "alt" text
+
+Interactions: confirmations should be spoken
+
+Tools:  Html Code sniffer
+Google Chrome
+
+
+Tutorial on using 
+--turn your brightness off and run the screen reader + keyboard combinations
+---Categories:  Keyboard, Color-blind(color contrast), Screen reading 
+
+
+
+
+
+
+
+
