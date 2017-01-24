@@ -28,7 +28,7 @@ Web Workflow Tools:
 *  mioxture.io
 *  bit.ly/scout-app
 *  Yo/Grunt/Bower
-*  *  Scaffold, write less with Yo
-*  *  Build, preview and test with Grunt
-*  *  Manage dependencies with Bower
+*    *  Scaffold, write less with Yo
+*    *  Build, preview and test with Grunt
+*    *  Manage dependencies with Bower
 
